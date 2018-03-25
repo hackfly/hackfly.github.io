@@ -1,215 +1,293 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Robotic Jam</title>
-    
-        <style type="text/css">
-      body {
-        font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro';
-        font-size: 17px;
-        background-color: white;
-        color: #000;
-        margin: 0;
-        padding: 0;
-    }
+<head>
+    <meta charset="utf-8"/>
+    <meta name="apple-itunes-app" content="app-id=1330538094"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BigSeconds</title>
 
-    div.document {
-        width: 940px;
-        margin: 30px auto 0 auto;
+    <style data-strip-on-export>
+    [contentEditable] {
+        outline: none;
     }
-
-    div.documentwrapper {
-        float: left;
-        width: 100%;
-    }
-
-    div.bodywrapper {
-        margin: 0 0 0 220px;
-    }
-
-    hr {
-        border: 1px solid #B1B4B6;
-    }
-
-    div.body {
-        background-color: #ffffff;
-        color: #3E4349;
-        padding: 0 30px 0 30px;
-    }
-
-    div.footer {
-        width: 940px;
-        margin: 20px auto 30px auto;
-        font-size: 14px;
-        color: #888;
+    #controls {
+        position: fixed;
+        /*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));*/
+        padding: 10px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
         text-align: right;
+        z-index: 10;
     }
-
-    div.footer a {
-        color: #888;
+    #controls button {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        color: black;
+        background-color: white;
+        padding: 0.5em;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0px 0px 3px gray;
     }
-
-    /* -- body styles ----------------------------------------------------------- */
-
-    a {
-        color: #004B6B;
-        text-decoration: underline;
-    }
-
-    a:hover {
-        color: #6D4100;
-        text-decoration: underline;
-    }
-
-    div.body h1,
-    div.body h2,
-    div.body h3,
-    div.body h4,
-    div.body h5,
-    div.body h6 {
-        font-family: 'Garamond', 'Georgia', serif;
-        font-weight: normal;
-        margin: 30px 0px 10px 0px;
-        padding: 0;
-    }
-
-    div.body h1 { margin-top: 0; padding-top: 0; font-size: 240%; }
-    div.body h2 { font-size: 180%; }
-    div.body h3 { font-size: 150%; }
-    div.body h4 { font-size: 130%; }
-    div.body h5 { font-size: 100%; }
-    div.body h6 { font-size: 100%; }
-
-    a.headerlink {
-        color: #DDD;
-        padding: 0 4px;
-        text-decoration: none;
-    }
-
-    div.body p, div.body dd, div.body li {
-        line-height: 1.4em;
-    }
-
-    pre, tt {
-        font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-        font-size: 0.9em;
-    }
-
-    blockquote {
-        margin: 0 0 0 30px;
-        padding: 0;
-    }
-
-    @media screen and (max-width: 870px) {
-
-        div.sidebar {
-          display: none;
-        }
-
-        div.document {
-           width: 100%;
-        }
-
-        div.documentwrapper {
-          margin-left: 0;
-          margin-top: 0;
-          margin-right: 0;
-          margin-bottom: 0;
-        }
-
-        div.bodywrapper {
-          margin-top: 0;
-          margin-right: 0;
-          margin-bottom: 0;
-          margin-left: 0;
-        }
-
-        ul {
-          margin-left: 0;
-        }
-
-        .document {
-          width: auto;
-        }
-
-        .footer {
-          width: auto;
-        }
-
-        .bodywrapper {
-          margin: 0;
-        }
-
-        .footer {
-          width: auto;
-        }
-
-        .github {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 875px) {
-
-        body {
-            margin: 0;
-            padding: 20px 30px;
-        }
-
-        div.documentwrapper {
-            float: none;
-            background: white;
-        }
-
-        div.document {
-            width: 100%;
-            margin: 0;
-        }
-
-        div.body {
-            min-height: 0;
-            padding: 0;
-        }
-
-        .rtd_doc_footer {
-            display: none;
-        }
-
-        .document {
-            width: auto;
-        }
-
-        .footer {
-            width: auto;
-        }
-
-        .footer {
-            width: auto;
-        }
-
-        .github {
-            display: none;
-        }
+    #controls button:hover {
+        background-color: #eee;
     }
     </style>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+    <script data-strip-on-export>
+        var id = "1330538094";
+        function exportHTML(route) {
+            var toStrip = document.querySelectorAll('[data-strip-on-export]');
+            for (var i=0; i<toStrip.length; i++) {
+                toStrip[i].parentElement.removeChild(toStrip[i]);
+            }
+            document.getElementById('content').removeAttribute('contentEditable');
+            var html = document.querySelector("html").outerHTML;
+            var form = document.createElement('form');
+            form.action = "/export";
+            form.method = "POST";
+            form.target = "_blank";
+            var setVal = function(name, val) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = name;
+                input.value = val;
+                form.appendChild(input);
+            }
+            setVal("html", html);
+            setVal("id", id);
+            setVal("route", route);
+            setVal("name", document.title);
+            form.style.display = "none";
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
+    
 
-  </head>
-  <body>
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="robotic-jam">
-<h1>Robotic Jam<a class="headerlink" href="#robotic-jam" title="Robotic Jam"></a></h1>
-<p>This is where you’ll find announcements about our exciting iOS apps – check back soon!</p>
-          </div>
-        </div>
-      </div>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+html, body, #content {
+    margin: 0px;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #19545e;
+    background-color: #99c0c9;
+    text-align: center;
+    line-height: 1.4;
+}
+#splash {
+    height: 100%;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+}
+@media screen and (min-width: 700px) {
+    #splash > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 1em;
+        height: 100%;
+    }
+    #splash #left {
+        text-align: right;
+    }
+    #splash #right {
+        text-align: left;
+    }
+    #splash .iphone {
+        width: 288px;
+        height: 576px;
+    }
+    #screenshots img {
+        max-width: 200px;
+    }
+    #like-container {
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        margin-top: -50px;
+    }
+}
+#chevron {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: -2em;
+    color: #19545e;
+    opacity: 0.5;
+    margin-left: -0.5em;
+}
+@media screen and (max-width: 700px) {
+    #chevron {
+        display: none;
+    }
+    #splash .iphone {
+        width: 192px;
+        height: 384px;
+        display: inline-block;
+    }
+    #splash #left {
+        padding: 10px;
+    }
+    #screenshots img {
+        max-width: 100px;
+    }
+    #splash .appstore {
+        display: none;
+    }
+}
+img.appstore {
+    max-width: 120px;
+}
+.iphone {
+    background-image: url('http://app-stop.appspot.com/static/5s.png');
+    background-size: contain;
+    position: relative;
+    width: 720px;
+    height: 1440px;
+}
+.iphone img {
+    position: absolute;
+    top: 17.9%;
+    left: 14%;
+    width: 73%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+}
+#icon-row {
+    margin: 30px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    position: relative;
+}
+#icon-row #icon-container {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    border: 10px solid #99c0c9;
+}
+#icon-row img {
+    width: 100%;
+    border-radius: 19px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}
+#description {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+}
+#screenshots {
+    margin-bottom: 2em;
+}
+#screenshots img {
+    border: 1px solid white;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    margin: 1em;
+}
+#description {
+    white-space: pre-wrap;
+}
+#stars {
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+}
+#stars span {
+    display: block;
+    font-size: 30px;
+    font-style: normal;
+}
+#attribution {
+    font-size: small;
+    padding: 2em;
+}
+#attribution a {
+    color: #19545e;
+}
+</style>
+
+
+</head>
+<body>
+    <div id='controls' data-strip-on-export>
+        <button onClick="exportHTML('github')">Export to Github</button>
+        <button onClick="exportHTML('url')">Get shareable URL</button>
     </div>
-  </body>
+<div id='content' contentEditable>
+
+
+<div id='chevron' class='fa fa-chevron-down'></div>
+<div id='splash'>
+    <div id='left'>
+        <h1>BigSeconds</h1>
+        <p>Big Seconds – 
+
+When you need a clean, minimalist clock that you can clearly see down to the second from across the room, or timers with voice alerts that countdown to your important moments.</p>
+        <a href='https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4'><img class='appstore' src='http://app-stop.appspot.com/static/appstore.svg' alt='Download on the Apple App Store'/></a>
+    </div>
+    <div id='right'>
+        <div class='iphone'>
+            <img src='http://is3.mzstatic.com/image/thumb/Purple118/v4/07/9c/2f/079c2f91-814e-2979-ce1f-408b78dc2295/source/392x696bb.jpg'/>
+        </div>
+    </div>
+</div>
+
+<div id='icon-row'>
+    <div id='icon-container'>
+        <img src='http://is3.mzstatic.com/image/thumb/Purple118/v4/76/bb/bc/76bbbcf8-c58d-b9bd-ecb6-0a3c9ccf5e09/source/512x512bb.jpg'/>
+    </div>
+</div>
+
+<div id='screenshots'>
+    
+        <img src=http://is4.mzstatic.com/image/thumb/Purple118/v4/6a/78/a4/6a78a42b-5618-33b8-7783-d2d78a83e371/source/392x696bb.jpg />
+    
+        <img src=http://is2.mzstatic.com/image/thumb/Purple128/v4/da/74/fb/da74fb44-2682-9c52-d738-990419fd44cb/source/392x696bb.jpg />
+    
+        <img src=http://is4.mzstatic.com/image/thumb/Purple118/v4/b4/e0/cf/b4e0cf32-c69b-1c70-bddf-8ca8fb76fc1f/source/392x696bb.jpg />
+    
+</div>
+
+
+
+<p id='description'>Big Seconds – 
+
+When you need a clean, minimalist clock or timer that you can clearly see down to the second from across the room.
+
+When you need a second-hand that doesn&#39;t amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand reaches half-way across your screen, and has a RACING STRIPE!
+
+When you need a timer that can give you voice updates as it approaches your target, so that you don&#39;t just get a beep when it&#39;s too early or late to be ready for your online auction or other time-sensitive goal, but can instead stay aware and be ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it&#39;s under your control.
+
+Big Seconds - it&#39;s your time, use it well.</p>
+
+<p>
+    <a href='https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4'><img class='appstore' src='http://app-stop.appspot.com/static/appstore.svg' alt='Download on the Apple App Store'/></a>
+</p>
+
+<p id='copyright'>&copy; Robotic Jam LLC </p>
+
+<p id='attribution'>
+Landing page created automatically with <a href='http://app-stop.appspot.com'>AppStop</a></p>
+
+
+</div>
+
+</body>
 </html>
