@@ -1,73 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta name="apple-itunes-app" content="app-id=1330538094"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BigSeconds</title>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="apple-itunes-app" content="app-id=1330538094">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BigSeconds</title>   
 
-    <style data-strip-on-export>
-    [contentEditable] {
-        outline: none;
-    }
-    #controls {
-        position: fixed;
-        /*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));*/
-        padding: 10px;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        text-align: right;
-        z-index: 10;
-    }
-    #controls button {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        color: black;
-        background-color: white;
-        padding: 0.5em;
-        font-weight: bold;
-        border: none;
-        box-shadow: 0px 0px 3px gray;
-    }
-    #controls button:hover {
-        background-color: #eee;
-    }
-    </style>
-    <script data-strip-on-export>
-        var id = "1330538094";
-        function exportHTML(route) {
-            var toStrip = document.querySelectorAll('[data-strip-on-export]');
-            for (var i=0; i<toStrip.length; i++) {
-                toStrip[i].parentElement.removeChild(toStrip[i]);
-            }
-            document.getElementById('content').removeAttribute('contentEditable');
-            var html = document.querySelector("html").outerHTML;
-            var form = document.createElement('form');
-            form.action = "/export";
-            form.method = "POST";
-            form.target = "_blank";
-            var setVal = function(name, val) {
-                var input = document.createElement("input");
-                input.type = "hidden";
-                input.name = name;
-                input.value = val;
-                form.appendChild(input);
-            }
-            setVal("html", html);
-            setVal("id", id);
-            setVal("route", route);
-            setVal("name", document.title);
-            form.style.display = "none";
-            document.body.appendChild(form);
-            form.submit();
-        }
-    </script>
-    
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <style>
 @import url(http://fonts.googleapis.com/css?family=Raleway);
@@ -77,8 +14,8 @@ html, body, #content {
     height: 100%;
     font-family: sans-serif;
     font-weight: lighter;
-    color: #19545e;
-    background-color: #99c0c9;
+    color: #185660;
+    background-color: #94d6e9;
     text-align: center;
     line-height: 1.4;
 }
@@ -123,7 +60,7 @@ html, body, #content {
     left: 50%;
     top: 100%;
     margin-top: -2em;
-    color: #19545e;
+    color: #185660;
     opacity: 0.5;
     margin-left: -0.5em;
 }
@@ -181,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     margin-left: -50px;
     margin-top: -50px;
-    border: 10px solid #99c0c9;
+    border: 10px solid #94d6e9;
 }
 #icon-row img {
     width: 100%;
@@ -219,60 +156,62 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2em;
 }
 #attribution a {
-    color: #19545e;
+    color: #185660;
 }
 </style>
-
-
 </head>
-<body>
-<div id='content' contentEditable>
+<body style="">
+    
+<div id="content">
 
-<div id='chevron' class='fa fa-chevron-down'></div>
-<div id='splash'>
-    <div id='left'>
+
+<div id="chevron" class="fa fa-chevron-down"></div>
+<div id="splash">
+    <div id="left">
         <h1>BigSeconds</h1>
         <p>A clean, minimalist clock that you can clearly see down to the second from across the room, and timers with voice alerts that countdown to your important moments.</p>
-        <a href='https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4'><img class='appstore' src='http://app-stop.appspot.com/static/appstore.svg' alt='Download on the Apple App Store'/></a>
+        <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
     </div>
-    <div id='right'>
-        <div class='iphone'>
-            <img src='http://is3.mzstatic.com/image/thumb/Purple118/v4/07/9c/2f/079c2f91-814e-2979-ce1f-408b78dc2295/source/392x696bb.jpg'/>
+    <div id="right">
+        <div class="iphone">
+            <img src="http://is3.mzstatic.com/image/thumb/Purple118/v4/07/9c/2f/079c2f91-814e-2979-ce1f-408b78dc2295/source/392x696bb.jpg">
         </div>
     </div>
 </div>
 
-<div id='icon-row'>
-    <div id='icon-container'>
-        <img src='http://is3.mzstatic.com/image/thumb/Purple118/v4/76/bb/bc/76bbbcf8-c58d-b9bd-ecb6-0a3c9ccf5e09/source/512x512bb.jpg'/>
+<div id="icon-row">
+    <div id="icon-container">
+        <img src="http://is3.mzstatic.com/image/thumb/Purple118/v4/76/bb/bc/76bbbcf8-c58d-b9bd-ecb6-0a3c9ccf5e09/source/512x512bb.jpg">
     </div>
 </div>
 
-<div id='screenshots'>
+<div id="screenshots">
     
-        <img src=http://is4.mzstatic.com/image/thumb/Purple118/v4/6a/78/a4/6a78a42b-5618-33b8-7783-d2d78a83e371/source/392x696bb.jpg />
+        <img src="http://is4.mzstatic.com/image/thumb/Purple118/v4/6a/78/a4/6a78a42b-5618-33b8-7783-d2d78a83e371/source/392x696bb.jpg">
     
-        <img src=http://is2.mzstatic.com/image/thumb/Purple128/v4/da/74/fb/da74fb44-2682-9c52-d738-990419fd44cb/source/392x696bb.jpg />
+        <img src="http://is2.mzstatic.com/image/thumb/Purple128/v4/da/74/fb/da74fb44-2682-9c52-d738-990419fd44cb/source/392x696bb.jpg">
     
-        <img src=http://is4.mzstatic.com/image/thumb/Purple118/v4/b4/e0/cf/b4e0cf32-c69b-1c70-bddf-8ca8fb76fc1f/source/392x696bb.jpg />
+        <img src="http://is4.mzstatic.com/image/thumb/Purple118/v4/b4/e0/cf/b4e0cf32-c69b-1c70-bddf-8ca8fb76fc1f/source/392x696bb.jpg">
     
 </div>
 
 
 
-<p id='description'>Big Seconds – 
+<p id="description">Big Seconds – 
 
-With a second-hand that doesn&#39;t amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand reaches half-way across your screen, and has a RACING STRIPE!
+With a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand reaches half-way across your screen, and has a RACING STRIPE!
 
-When you need a timer to give you voice updates as it approaches your target, so that you don&#39;t just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it&#39;s under your control.
+When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
 
-Big Seconds - it&#39;s your time, use it well.</p>
+Big Seconds - it's your time, use it well.</p>
 
 <p>
-    <a href='https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4'><img class='appstore' src='http://app-stop.appspot.com/static/appstore.svg' alt='Download on the Apple App Store'/></a>
+    <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
 </p>
 
-<p id='copyright'>&copy; 2018 Robotic Jam LLC </p>
+<p></p>
+
+<p id="copyright">© 2018 Robotic Jam LLC </p>
 
 <a href="mailto:info@roboticjam.com" title="Email" aria-label="Email">
     <span class="button-defaultState">
@@ -284,12 +223,10 @@ Big Seconds - it&#39;s your time, use it well.</p>
         </span>
     </span>
 </a>
-    
-<p id='attribution'>
-Landing page created automatically with <a href='http://app-stop.appspot.com'>AppStop</a></p>
 
+<p id="attribution">
+Landing page created automatically with <a href="http://app-stop.appspot.com">AppStop</a></p>
 
 </div>
 
-</body>
-</html>
+</body></html>
