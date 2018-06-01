@@ -1,13 +1,11 @@
-<html><head>
-    <meta charset="utf-8">
-    <meta name="apple-itunes-app" content="app-id=1330538094">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BigSeconds</title>   
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+* {box-sizing: border-box}
 
 html, body, #content {
     margin: 0px;
@@ -16,17 +14,28 @@ html, body, #content {
     font-weight: lighter;
     color: #185660;
     background-color: #94d6e9;
-    text-align: center;
     line-height: 1.4;
+    text-align: center;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+}
+
 #splash {
-    height: 100%;
+    height: 95%;
     width: 100%;
     display: table;
     table-layout: fixed;
     max-width: 700px;
     margin: auto;
     position: relative;
+}
+#chevron {
+    left: 50%;
+    color: #185660;
+    opacity: 0.5;
+    margin-left: -0.5em;
 }
 @media screen and (min-width: 700px) {
     #splash > div {
@@ -48,21 +57,6 @@ html, body, #content {
     #screenshots img {
         max-width: 200px;
     }
-    #like-container {
-        position: absolute;
-        top: 100%;
-        right: 20px;
-        margin-top: -50px;
-    }
-}
-#chevron {
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    margin-top: -2em;
-    color: #185660;
-    opacity: 0.5;
-    margin-left: -0.5em;
 }
 @media screen and (max-width: 700px) {
     #chevron {
@@ -99,9 +93,11 @@ img.appstore {
     left: 14%;
     width: 73%;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
-    font-weight: normal;
+.iphone2 img {
+    position: absolute;
+    top: 17.9%;
+    left: 14%;
+    width: 73%;
 }
 #icon-row {
     margin: 30px;
@@ -158,75 +154,233 @@ h1, h2, h3, h4, h5, h6 {
 #attribution a {
     color: #185660;
 }
+
+/* Style the tab */
+.tab {
+    float: left;
+    width: 14%;
+    min-width: 140px;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 16px 16px;
+    width: 100%;
+    border: none;
+    outline: 1px solid #94d6e9;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 18px;
+    height: 100vh;
+    /*min-width: 140px;*/
+}
 </style>
 </head>
-<body style="">
-    
-<div id="content">
+<body style="" >
 
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Robotic Jam')" id="defaultOpen">Robotic Jam</button>
+  <button class="tablinks" onclick="openTab(event, 'BigSeconds')">BigSeconds</button>
+  <button class="tablinks" onclick="openTab(event, 'RunIntervals')">RunIntervals</button>
+  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+</div>
 
-<div id="chevron" class="fa fa-chevron-down"></div>
-<div id="splash">
+<div id="Robotic Jam" class="tabcontent">
+  <div id="content">
+  <div id="splash">
     <div id="left">
-        <h1>BigSeconds</h1>
-        <p>A clean, minimalist clock that you can clearly see down to the second from across the room, and timers with voice alerts that countdown to your important moments.</p>
-        <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+      <h1>Robotic Jam</h1>
+      <p>A small indie iOS Dev Studio<br>
+      near Houston, Texas.</p>
     </div>
     <div id="right">
-        <div class="iphone">
-			<img src="https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/60/72/16/60721691-dd3f-f567-3f81-1b735bbfbccb/source/392x696bb.jpg">
-        </div>
+      <div>
+        <img src="robotic jam logo.png">
+      </div>
     </div>
+  </div>
+
+  &#169 2018 Robotic Jam LLC
+
+  </div>
 </div>
 
-<div id="icon-row">
+
+<div id="BigSeconds" class="tabcontent">
+  <div id="content">
+
+  <div id="chevron" class="fa fa-chevron-down"></div>
+  <div id="splash">
+      <div id="left">
+          <h1>BigSeconds</h1>
+          <p>A clean, minimalist clock that you can clearly see down to the second from across the room, and timers with voice alerts that countdown to your important moments.</p>
+          <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+      </div>
+      <div id="right">
+          <div class="iphone">
+        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/60/72/16/60721691-dd3f-f567-3f81-1b735bbfbccb/source/392x696bb.jpg">
+          </div>
+      </div>
+  </div>
+
+  <div id="icon-row">
+      <div id="icon-container">
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/cb/eb/63/cbeb6383-900f-1df2-1cab-a5a51c8a0f86/source/512x512bb.jpg">
+      </div>
+  </div>
+
+  <div id="screenshots">
+
+      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/f6/12/dd/f612ddc3-2f77-d0be-c261-0b3af01866c9/source/392x696bb.jpg">
+    
+      <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/6a/ce/2c/6ace2c3c-d79f-7dea-c95f-262d71b0d8a3/source/392x696bb.jpg">
+    
+      <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ce/46/48/ce464838-d993-e81b-eef5-a5b2c2d964d9/source/392x696bb.jpg">
+    
+  </div>
+
+  <p id="description">BigSeconds -
+
+  When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
+
+  Featuring a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand stretches half-way across your screen, and has a RACING STRIPE!
+
+  BigSeconds - it's your time, use it well!</p>
+
+  <p>
+      <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+  </p>
+
+  <p></p>
+
+  <p id="copyright">&#169 2018 Robotic Jam LLC </p>
+
+  <p id="attribution">
+  Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
+
+  </div>
+</div>
+
+<div id="RunIntervals" class="tabcontent">
+  <div id="content">
+  <div id="chevron" class="fa fa-chevron-down"></div>
+  <div id="splash">
+    <div id="left">
+      <h1>RunIntervals</h1>
+      <p>Just pick your interval durations<br>
+      and click GO!</p>
+      <a href="https://itunes.apple.com/us/app/runintervals/id1387917509?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+    </div>
+    <div id="right">
+      <div class="iphone">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/0d/98/18/0d98188c-8085-20bd-41f0-a29da64f9047/source/392x696bb.jpg">
+      </div>
+    </div>
+  </div>
+
+  <div id="icon-row">
     <div id="icon-container">
-		<img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/cb/eb/63/cbeb6383-900f-1df2-1cab-a5a51c8a0f86/source/512x512bb.jpg">
+      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/5d/9e/87/5d9e87ce-8ee0-20e5-0d84-db06fadf4d32/source/512x512bb.jpg">
     </div>
+  </div>
+
+  <div id="screenshots">
+    
+      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/9d/2a/e5/9d2ae540-6e51-de09-a943-eeb196231257/source/392x696bb.jpg">
+    
+  </div>
+
+
+
+  <p id="description">Just pick your interval durations and click GO!
+
+  "Plays well with others," so if you have favorite apps for audio or fitness tracking it will work well alongside those. Audio voice alerts or tones will momentarily lower the volume of your music or briefly pause spoken audio just long enough to hear the alert, then let you get right back to listening!
+
+  This app does not track or collect any user data.</p>
+
+  <p>
+    <a href="https://itunes.apple.com/us/app/runintervals/id1387917509?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+  </p>
+
+  <p></p>
+    
+  <p></p>
+
+  <p id="copyright">&#169 2018 Robotic Jam LLC </p>
+
+  <p id="attribution">
+  Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
+
+
+  </div>
 </div>
 
-<div id="screenshots">
+<div id="Contact" class="tabcontent">
+  <div id="content">
+  <div id="splash">
+    <div id="left">
+      <h1>Feedback</h1>
+      <p>I would love to hear from you!<br>
+         <a href="mailto:info@roboticjam.com" title="Email" aria-label="Email">
+            <span class="button-defaultState">
+                <span class="svgIcon svgIcon--email svgIcon--21px">
+                    <svg class="svgIcon-use" width="21" height="21" viewBox="0 0 21 21">
+                        <path d="M4.508 4A2.504 2.504 0 0 0 2 6.508v.277l8.054 4.1c.225.115.667.115.892 0L19 6.785v-.277A2.503 2.503 0 0 0 16.492 4H4.508zm4.995 8.133L2 8.313v6.323a2.502 2.502 0 0 0 2.508 2.507h11.984A2.505 2.505 0 0 0 19 14.636V8.313l-7.503 3.82c-.285.145-.64.217-.997.217-.356 0-.712-.072-.997-.217z">
+                        </path>
+                    </svg>
+                </span>
+            </span>
+        </a>
+      </p>
+    </div>
+    <div id="right"> </div>
+  </div>
 
-		<img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/f6/12/dd/f612ddc3-2f77-d0be-c261-0b3af01866c9/source/392x696bb.jpg">
-	
-		<img src="https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/6a/ce/2c/6ace2c3c-d79f-7dea-c95f-262d71b0d8a3/source/392x696bb.jpg">
-	
-		<img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ce/46/48/ce464838-d993-e81b-eef5-a5b2c2d964d9/source/392x696bb.jpg">
-	
+  &#169 2018 Robotic Jam LLC
+
+  </div>
 </div>
 
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
-
-<p id="description">BigSeconds – 
-
-When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
-
-Featuring a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand stretches half-way across your screen, and has a RACING STRIPE!
-
-BigSeconds - it's your time, use it well!</p>
-
-<p>
-    <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
-</p>
-
-<p></p>
-
-<p id="copyright">© 2018 Robotic Jam LLC </p>
-
-<a href="mailto:info@roboticjam.com" title="Email" aria-label="Email">
-    <span class="button-defaultState">
-        <span class="svgIcon svgIcon--email svgIcon--21px">
-            <svg class="svgIcon-use" width="21" height="21" viewBox="0 0 21 21">
-                <path d="M4.508 4A2.504 2.504 0 0 0 2 6.508v.277l8.054 4.1c.225.115.667.115.892 0L19 6.785v-.277A2.503 2.503 0 0 0 16.492 4H4.508zm4.995 8.133L2 8.313v6.323a2.502 2.502 0 0 0 2.508 2.507h11.984A2.505 2.505 0 0 0 19 14.636V8.313l-7.503 3.82c-.285.145-.64.217-.997.217-.356 0-.712-.072-.997-.217z">
-                </path>
-            </svg>
-        </span>
-    </span>
-</a>
-
-<p id="attribution">
-Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
-
-</div>
-
-</body></html>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html>
