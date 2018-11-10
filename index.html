@@ -203,7 +203,7 @@ img.appstore {
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Robotic Jam')" id="defaultOpen">Robotic Jam</button>
   <button class="tablinks" onclick="openTab(event, 'BigSeconds')">BigSeconds</button>
-  <button class="tablinks" onclick="openTab(event, 'RunIntervals')">RunIntervals</button>
+  <button class="tablinks" onclick="openTab(event, 'RunIntervals')" id="RIbutton">RunIntervals</button>
   <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
 </div>
 
@@ -318,7 +318,9 @@ img.appstore {
 
   "Plays well with others," so if you have favorite apps for audio or fitness tracking it will work well alongside those. Audio voice alerts or tones will momentarily lower the volume of your music or briefly pause spoken audio just long enough to hear the alert, then let you get right back to listening!
 
-  This app does not track or collect any user data.</p>
+
+  <a id="RunIntervalsPrivacyPolicy"><i>Privacy Policy:</i></a>
+This app does not collect, store, or track any information about you. There is a link in the app to provide feedback via email, and if used I will only use your email address to respond to your feedback.</p>
 
   <p>
     <a href="https://itunes.apple.com/us/app/runintervals/id1387917509?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
@@ -380,6 +382,11 @@ function openTab(evt, tabName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+    
+if (location.hash === "#RunIntervalsPrivacyPolicy") {
+    document.getElementById("RIbutton").click();
+    location.href = "#RunIntervalsPrivacyPolicy";
+}    
 </script>
      
 </body>
