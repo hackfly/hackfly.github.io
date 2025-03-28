@@ -12,8 +12,8 @@ html, body, #content {
     height: 100%;
     font-family: sans-serif;
     font-weight: lighter;
-    color: #185660;
-    background-color: #94d6e9;
+    color: #dda766;
+    background-color: #1e140a;
     line-height: 1.4;
     text-align: center;
 }
@@ -21,193 +21,32 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
     font-weight: normal;
 }
-
-#splash {
-    height: 95%;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    max-width: 700px;
-    margin: auto;
-    position: relative;
-}
-#chevron {
-    left: 50%;
-    color: #185660;
-    opacity: 0.5;
-    margin-left: -0.5em;
-}
-@media screen and (min-width: 700px) {
-    #splash > div {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 1em;
-        height: 100%;
-    }
-    #splash #left {
-        text-align: right;
-    }
-    #splash #right {
-        text-align: left;
-    }
-    #splash .iphone {
-        width: 288px;
-        height: 576px;
-    }
-    #screenshots img {
-        max-width: 200px;
-    }
-}
-@media screen and (max-width: 700px) {
-    #chevron {
-        display: none;
-    }
-    #splash .iphone {
-        width: 192px;
-        height: 384px;
-        display: inline-block;
-    }
-    #splash #left {
-        padding: 10px;
-    }
-    #screenshots img {
-        max-width: 100px;
-    }
-    #splash .appstore {
-        display: none;
-    }
-}
-img.appstore {
-    max-width: 120px;
-}
-.iphone {
-    background-image: url('http://app-stop.appspot.com/static/5s.png');
-    background-size: contain;
-    position: relative;
-    width: 720px;
-    height: 1440px;
-}
-.iphone img {
-    position: absolute;
-    top: 17.9%;
-    left: 14%;
-    width: 73%;
-}
-.iphone2 img {
-    position: absolute;
-    top: 17.9%;
-    left: 14%;
-    width: 73%;
-}
-#icon-row {
-    margin: 30px;
-    margin-top: 40px;
-    margin-bottom: 80px;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
-    position: relative;
-}
-#icon-row #icon-container {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    left: 50%;
-    top: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
-    border: 10px solid #94d6e9;
-}
-#icon-row img {
-    width: 100%;
-    border-radius: 19px;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
-}
-#description {
-    margin: auto;
-    width: 90%;
-    max-width: 600px;
-}
-#screenshots {
-    margin-bottom: 2em;
-}
-#screenshots img {
-    border: 1px solid white;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
-    margin: 1em;
-}
-#description {
-    white-space: pre-wrap;
-}
-#stars {
-    text-align: center;
-    font-style: italic;
-    font-size: small;
-}
-#stars span {
-    display: block;
-    font-size: 30px;
-    font-style: normal;
-}
-#attribution {
-    font-size: small;
-    padding: 2em;
-}
-#attribution a {
-    color: #185660;
-}
-
-/* Style the tab */
-.tab {
-    float: left;
-    width: 14%;
-    min-width: 140px;
-    margin-left: 3px;
-    margin-top: 3px;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    display: block;
-    background-color: #f1f1f1;
-    color: black;
-    padding: 16px 16px;
-    width: 100%;
-    border: none;
-    outline: 1px solid #94d6e9;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 18px;
-    height: 100vh;
-    /*min-width: 140px;*/
-}
 </style>
 </head>
 <body style="" >
 
 <div>
-<p id="description">Política de Privacidad -
+<ul style="text-align:left";>
 
-Las aplicaciones de Robotic Jam no recopilan, almacenan ni rastrean ninguna información sobre usted.
-Hay un enlace en la aplicación para enviar comentarios por correo electrónico,
-si se usa, solo usaré su dirección de correo electrónico para responder a sus comentarios.
-
-  <p id="copyright">&#169 2020 Robotic Jam LLC </p>
+<p id="description">Política de Privacidad –<br>
+<br>
+<i>Run Intervals</i> no recopila, almacena ni rastrea información sobre usted.<br>
+<br>
+<i>Big Seconds</i> utiliza Google AdMob para mostrar un banner publicitario, <br>
+y este servicio puede recopilar cierta información, incluyendo:
+<ul style="text-align:left";>
+<li>Dirección IP, que puede utilizarse para estimar la ubicación general de un dispositivo.</li>
+<li>Registros de fallos no relacionados con el usuario, que pueden utilizarse para diagnosticar problemas y mejorar el SDK. La información de diagnóstico también puede utilizarse con fines publicitarios y analíticos.</li>
+<li>Datos de rendimiento asociados al usuario, como el tiempo de inicio de la aplicación, la tasa de bloqueo o el consumo de energía, que pueden utilizarse para evaluar el comportamiento del usuario, comprender la eficacia de las funciones existentes del producto y planificar nuevas funciones. Los datos de rendimiento también pueden utilizarse para mostrar anuncios, incluyendo compartirlos con otras entidades que los muestran.</li>
+<li>Un ID de dispositivo, como el identificador de publicidad del dispositivo u otros identificadores de dispositivo vinculados a la aplicación, que puede utilizarse para fines publicitarios y analíticos de terceros.</li>
+<li>Los datos publicitarios, como los anuncios que ha visto el usuario, pueden utilizarse para impulsar las funciones analíticas y publicitarias.</li>
+<li>Otras interacciones del usuario con el producto, como los toques de inicio de la aplicación y la información de interacción, pueden utilizarse para mejorar el rendimiento de la publicidad.</li>
+</ul>
+<br>
+En las aplicaciones de <i>Robotic Jam</i> hay un enlace para enviar comentarios por correo electrónico. <br>
+Si lo utilizas, solo usaré tu dirección de correo electrónico para responder a tus comentarios.
+<br><br>
+<p id="copyright">&#169 2025 Robotic Jam LLC </p>
 
 </div>
 

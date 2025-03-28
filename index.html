@@ -12,8 +12,8 @@ html, body, #content {
     height: 100%;
     font-family: sans-serif;
     font-weight: lighter;
-    color: #185660;
-    background-color: #94d6e9;
+    color: #dda766;
+    background-color: #1e140a;
     line-height: 1.4;
     text-align: center;
 }
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #chevron {
     left: 50%;
-    color: #185660;
+    color: #a5cced;
     opacity: 0.5;
     margin-left: -0.5em;
 }
@@ -114,7 +114,7 @@ img.appstore {
     top: 50%;
     margin-left: -50px;
     margin-top: -50px;
-    border: 10px solid #94d6e9;
+    border: 10px solid #1e140a;
 }
 #icon-row img {
     width: 100%;
@@ -152,31 +152,31 @@ img.appstore {
     padding: 2em;
 }
 #attribution a {
-    color: #185660;
+    color: #a5cced;
 }
 
 /* Style the tab */
 .tab {
     float: left;
-    width: 14%;
-    min-width: 140px;
-    margin-left: 3px;
-    margin-top: 3px;
+    width: 8%;
+    min-width: 120px;
+    margin-left: 2px;
+    margin-top: 2px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
     display: block;
-    background-color: #f1f1f1;
-    color: black;
-    padding: 16px 16px;
+    background-color: #b1967d;
+    color: #4f3413;
+    padding: 5px 5px;
     width: 100%;
     border: none;
-    outline: 1px solid #94d6e9;
+    outline: 1px solid #43260b;
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Change background color of buttons on hover */
@@ -202,8 +202,9 @@ img.appstore {
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Robotic Jam')" id="defaultOpen">Robotic Jam</button>
+  <button class="tablinks" onclick="openTab(event, 'HexFold')">HexFold</button>
   <button class="tablinks" onclick="openTab(event, 'BigSeconds')">BigSeconds</button>
-  <button class="tablinks" onclick="openTab(event, 'RunIntervals')" id="RIbutton">RunIntervals</button>
+  <button class="tablinks" onclick="openTab(event, 'RunIntervals')">RunIntervals</button>
   <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
 </div>
 
@@ -212,8 +213,8 @@ img.appstore {
   <div id="splash">
     <div id="left">
       <h1>Robotic Jam</h1>
-      <p>A small indie iOS Dev Studio<br>
-      near Houston, Texas.</p>
+      <p>an indie game dev studio<br>
+      near Houston, Texas</p>
     </div>
     <div id="right">
       <div>
@@ -222,65 +223,172 @@ img.appstore {
     </div>
   </div>
 
-  &#169 2018 Robotic Jam LLC
+  &#169 2025 Robotic Jam LLC
 
   </div>
 </div>
 
+<div id="HexFold" class="tabcontent">
+    <div id="content">
+  
+    <div id="chevron" class="fa fa-chevron-down"></div>
+    <div id="splash">
+        <div id="left">
+            <h1><i>HexFold</i></h1>
+            <br>
+            <p>A mobile puzzler</p>
+            <br>
+            <p>Coming soon!
+            </p>
+        </div>
+        <div id="right">
+            <div class="iphone">
+            </div>
+        </div>
+    </div>
+  
+    <div id="icon-row">
+        <div id="icon-container">
+        
+        </div>
+    </div>
+  
+    <div id="screenshots">
+        
+    </div>
+  
+    <p id="description"> – HexFold –
+  
+    Navigate hexagonal tilescapes, collect diamonds, 
+    match or avoid tiles depending on the level.
+    
+    Chill vibe.
+    
+    Looks simple, but looks can be deceiving.
+
+    Don't get stuck!
+
+    </p>
+  
+    <p>
+
+    </p>
+  
+    <p></p>
+  
+    <p id="copyright">&#169 2025 Robotic Jam LLC </p>    
+
+    </div>
+</div>
 
 <div id="BigSeconds" class="tabcontent">
-  <div id="content">
+    <div id="content">
 
-  <div id="chevron" class="fa fa-chevron-down"></div>
-  <div id="splash">
-      <div id="left">
-          <h1>BigSeconds</h1>
-          <p>A clean, minimalist clock that you can clearly see down to the second from across the room, and timers with voice alerts that countdown to your important moments.</p>
-          <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
-      </div>
-      <div id="right">
-          <div class="iphone">
-        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/60/72/16/60721691-dd3f-f567-3f81-1b735bbfbccb/source/392x696bb.jpg">
-          </div>
-      </div>
-  </div>
+    <div id="chevron" class="fa fa-chevron-down"></div>
+    <div id="splash">
+        <div id="left">
+            <h1>BigSeconds</h1>
+            <p>A clean, minimalist clock that you can clearly see down to the second from across the room, and timers with voice alerts that countdown to your important moments.</p>
+            <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+        </div>
+        <div id="right">
+            <div class="iphone">
+            <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/60/72/16/60721691-dd3f-f567-3f81-1b735bbfbccb/source/392x696bb.jpg">
+            </div>
+        </div>
+    </div>
 
-  <div id="icon-row">
-      <div id="icon-container">
-      <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/cb/eb/63/cbeb6383-900f-1df2-1cab-a5a51c8a0f86/source/512x512bb.jpg">
-      </div>
-  </div>
+    <div id="icon-row">
+        <div id="icon-container">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/cb/eb/63/cbeb6383-900f-1df2-1cab-a5a51c8a0f86/source/512x512bb.jpg">
+        </div>
+    </div>
 
-  <div id="screenshots">
+    <div id="screenshots">
 
-      <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/f6/12/dd/f612ddc3-2f77-d0be-c261-0b3af01866c9/source/392x696bb.jpg">
-    
-      <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/6a/ce/2c/6ace2c3c-d79f-7dea-c95f-262d71b0d8a3/source/392x696bb.jpg">
-    
-      <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ce/46/48/ce464838-d993-e81b-eef5-a5b2c2d964d9/source/392x696bb.jpg">
-    
-  </div>
+        <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/f6/12/dd/f612ddc3-2f77-d0be-c261-0b3af01866c9/source/392x696bb.jpg">
+        
+        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/6a/ce/2c/6ace2c3c-d79f-7dea-c95f-262d71b0d8a3/source/392x696bb.jpg">
+        
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ce/46/48/ce464838-d993-e81b-eef5-a5b2c2d964d9/source/392x696bb.jpg">
+        
+    </div>
 
-  <p id="description">BigSeconds -
+    <p id="description">BigSeconds -
 
-  When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
+    When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
 
-  Featuring a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand stretches half-way across your screen, and has a RACING STRIPE!
+    Featuring a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand stretches half-way across your screen, and has a RACING STRIPE!
 
-  BigSeconds - it's your time, use it well!</p>
+    BigSeconds - it's your time, use it well!</p>
 
-  <p>
-      <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
-  </p>
+    <p>
+        <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+    </p>
 
-  <p></p>
+    <p></p>
 
-  <p id="copyright">&#169 2018 Robotic Jam LLC </p>
+    <p id="copyright">&#169 2025 Robotic Jam LLC </p>
 
-  <p id="attribution">
-  Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
+    <p id="attribution">
+    Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
 
-  </div>
+    </div>
+    </div>
+
+    <div id="BigSeconds" class="tabcontent">
+    <div id="content">
+
+    <div id="chevron" class="fa fa-chevron-down"></div>
+    <div id="splash">
+        <div id="left">
+            <h1>BigSeconds</h1>
+            <p>A clean, minimalist clock that you can clearly see down to the second from across the room, and timers with voice alerts that countdown to your important moments.</p>
+            <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+        </div>
+        <div id="right">
+            <div class="iphone">
+            <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/60/72/16/60721691-dd3f-f567-3f81-1b735bbfbccb/source/392x696bb.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div id="icon-row">
+        <div id="icon-container">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/cb/eb/63/cbeb6383-900f-1df2-1cab-a5a51c8a0f86/source/512x512bb.jpg">
+        </div>
+    </div>
+
+    <div id="screenshots">
+
+        <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/f6/12/dd/f612ddc3-2f77-d0be-c261-0b3af01866c9/source/392x696bb.jpg">
+        
+        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple128/v4/6a/ce/2c/6ace2c3c-d79f-7dea-c95f-262d71b0d8a3/source/392x696bb.jpg">
+        
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ce/46/48/ce464838-d993-e81b-eef5-a5b2c2d964d9/source/392x696bb.jpg">
+        
+    </div>
+
+    <p id="description">BigSeconds -
+
+    When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
+
+    Featuring a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand stretches half-way across your screen, and has a RACING STRIPE!
+
+    BigSeconds - it's your time, use it well!</p>
+
+    <p>
+        <a href="https://itunes.apple.com/us/app/bigseconds/id1330538094?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+    </p>
+
+    <p></p>
+
+    <p id="copyright">&#169 2025 Robotic Jam LLC </p>
+
+    <p id="attribution">
+    Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
+
+    </div>
 </div>
 
 <div id="RunIntervals" class="tabcontent">
@@ -318,9 +426,7 @@ img.appstore {
 
   "Plays well with others," so if you have favorite apps for audio or fitness tracking it will work well alongside those. Audio voice alerts or tones will momentarily lower the volume of your music or briefly pause spoken audio just long enough to hear the alert, then let you get right back to listening!
 
-
-  <a id="RunIntervalsPrivacyPolicy"><i>Privacy Policy:</i></a>
-This app does not collect, store, or track any information about you. There is a link in the app to provide feedback via email, and if used I will only use your email address to respond to your feedback.</p>
+  This app does not track or collect any user data.</p>
 
   <p>
     <a href="https://itunes.apple.com/us/app/runintervals/id1387917509?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
@@ -330,7 +436,7 @@ This app does not collect, store, or track any information about you. There is a
     
   <p></p>
 
-  <p id="copyright">&#169 2018 Robotic Jam LLC </p>
+  <p id="copyright">&#169 2025 Robotic Jam LLC </p>
 
   <p id="attribution">
   Landing page created with <a href="http://app-stop.appspot.com">AppStop</a></p>
@@ -344,12 +450,12 @@ This app does not collect, store, or track any information about you. There is a
   <div id="splash">
     <div id="left">
       <h1>Feedback</h1>
-      <p>I would love to hear from you!<br>
+      <p>I would love to hear from you!<br><br>
          <a href="mailto:info@roboticjam.com" title="Email" aria-label="Email">
             <span class="button-defaultState">
                 <span class="svgIcon svgIcon--email svgIcon--21px">
                     <svg class="svgIcon-use" width="21" height="21" viewBox="0 0 21 21">
-                        <path d="M4.508 4A2.504 2.504 0 0 0 2 6.508v.277l8.054 4.1c.225.115.667.115.892 0L19 6.785v-.277A2.503 2.503 0 0 0 16.492 4H4.508zm4.995 8.133L2 8.313v6.323a2.502 2.502 0 0 0 2.508 2.507h11.984A2.505 2.505 0 0 0 19 14.636V8.313l-7.503 3.82c-.285.145-.64.217-.997.217-.356 0-.712-.072-.997-.217z">
+                        <path fill="#edd7bb" d="M4.508 4A2.504 2.504 0 0 0 2 6.508v.277l8.054 4.1c.225.115.667.115.892 0L19 6.785v-.277A2.503 2.503 0 0 0 16.492 4H4.508zm4.995 8.133L2 8.313v6.323a2.502 2.502 0 0 0 2.508 2.507h11.984A2.505 2.505 0 0 0 19 14.636V8.313l-7.503 3.82c-.285.145-.64.217-.997.217-.356 0-.712-.072-.997-.217z">
                         </path>
                     </svg>
                 </span>
@@ -360,7 +466,7 @@ This app does not collect, store, or track any information about you. There is a
     <div id="right"> </div>
   </div>
 
-  &#169 2018 Robotic Jam LLC
+  &#169 2025 Robotic Jam LLC
 
   </div>
 </div>
@@ -382,12 +488,7 @@ function openTab(evt, tabName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-    
-if (location.hash === "#RunIntervalsPrivacyPolicy") {
-    document.getElementById("RIbutton").click();
-    location.href = "#RunIntervalsPrivacyPolicy";
-}    
 </script>
      
 </body>
-</html>
+</html> 
