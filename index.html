@@ -62,6 +62,10 @@ h1, h2, h3, h4, h5, h6 {
     #chevron {
         display: none;
     }
+    #splash {
+        height: auto;
+        min-height: unset;
+    }
     #splash .iphone {
         width: 192px;
         height: 384px;
@@ -75,6 +79,13 @@ h1, h2, h3, h4, h5, h6 {
     }
     #splash .appstore {
         display: none;
+    }
+    .tabcontent {
+        height: auto;
+        overflow: hidden;
+    }
+    #content {
+        height: auto;
     }
 }
 img.appstore {
@@ -264,7 +275,8 @@ img.appstore {
     
     Chill vibe.
     
-    Looks simple, but looks can be deceiving.
+    Looks simple. But is it?
+    Judge a block by its color – at your peril.
 
     Don't get stuck!
 
@@ -398,6 +410,7 @@ img.appstore {
     <div id="left">
       <h1>RunIntervals</h1>
       <p>Run / Walk interval training timer for iOS</p>
+      <br>
       <a href="https://itunes.apple.com/us/app/runintervals/id1387917509?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
     </div>
     <div id="right">
@@ -428,6 +441,8 @@ img.appstore {
   Works with Apple Watch as companion app, requires iPhone to be near.<br>
   
   This app does not track or collect any user data.</p>
+
+  <br>
 
   <p>
     <a href="https://itunes.apple.com/us/app/runintervals/id1387917509?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
@@ -473,23 +488,53 @@ img.appstore {
 </div>
 
 <script>
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        
+        // If evt is an actual event (not null when called from URL)
+        if (evt && evt.currentTarget) {
+            evt.currentTarget.className += " active";
+        } else {
+            // Find and activate the correct tab button when called from URL parameter
+            for (i = 0; i < tablinks.length; i++) {
+                if (tablinks[i].textContent === tabName) {
+                    tablinks[i].className += " active";
+                }
+            }
+        }
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    
+    // Function to get URL parameters
+    function getParameterByName(name) {
+        var url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+    
+    // Check if there's a tab parameter when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        var tab = getParameterByName('tab');
+        if (tab && document.getElementById(tab)) {
+            openTab(null, tab);
+        } else {
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        }
+    });
+    </script>
      
 </body>
 </html> 
