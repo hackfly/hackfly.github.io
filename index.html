@@ -166,7 +166,6 @@ img.appstore {
     color: #a5cced;
 }
 
-/* Style the tab */
 .tab {
     float: left;
     width: 8%;
@@ -175,7 +174,6 @@ img.appstore {
     margin-top: 2px;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
     display: block;
     background-color: #b1967d;
@@ -190,12 +188,10 @@ img.appstore {
     font-size: 14px;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
     background-color: #ddd;
 }
 
-/* Create an active/current "tab button" class */
 .tab button.active {
     background-color: #ccc;
 }
@@ -206,10 +202,8 @@ img.appstore {
     padding: 0px 18px;
     min-height: 100vh;
     overflow-y: auto;
-    /*min-width: 140px;*/
 }
 
-/* Add this new media query for portrait orientation */
 @media screen and (max-width: 700px) and (orientation: portrait) {
     .tabcontent {
         height: auto;
@@ -218,11 +212,19 @@ img.appstore {
     }
     
     #icon-row {
-        margin-bottom: 40px; /* Reduce the bottom margin */
+        margin-bottom: 70px;
     }
     
     #screenshots {
-        margin-bottom: 1em; /* Less margin to save space */
+        margin-top: 4em;
+        margin-bottom: 2em;
+    }
+    
+    #screenshots img {
+        max-width: 80%;
+        width: 300px;
+        margin: 1.5em auto;
+        display: block;
     }
 }
 </style>
