@@ -198,10 +198,35 @@ img.appstore {
 
 /* Style the tab content */
 .tabcontent {
-    float: left;
+    display: flex;
+    flex-direction: column;
     padding: 0px 18px;
     min-height: 100vh;
+    width: calc(100% - 120px);
     overflow-y: auto;
+}
+
+.tabcontent > #content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    min-height: 100%;
+}
+
+/* Center content vertically only on large screens */
+@media screen and (min-width: 1024px) and (min-height: 800px) {
+    .tabcontent > #content {
+        justify-content: center;
+    }
+}
+
+/* Make copyright stick to the bottom */
+#copyright {
+    margin-top: auto !important;
+    padding-bottom: 20px;
+    position: relative;
+    flex-shrink: 0;
 }
 
 @media screen and (max-width: 700px) and (orientation: portrait) {
@@ -229,7 +254,7 @@ img.appstore {
 }
 </style>
 </head>
-<body style="" >
+<body>
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Robotic Jam')" id="defaultOpen">Robotic Jam</button>
@@ -241,21 +266,22 @@ img.appstore {
 
 <div id="Robotic Jam" class="tabcontent">
   <div id="content">
-  <div id="splash">
-    <div id="left">
-      <h1>Robotic Jam</h1>
-      <p>an indie game dev studio<br>
-      near Houston, Texas</p>
-    </div>
-    <div id="right">
-      <div>
-        <img src="robotic jam logo.png">
+    <div id="splash">
+      <div id="left">
+        <h1>Robotic Jam</h1>
+        <p>an indie game dev studio<br>
+        near Houston, Texas</p>
+      </div>
+      <div id="right">
+        <div>
+          <img src="robotic jam logo.png">
+        </div>
       </div>
     </div>
-  </div>
 
-  &#169 2025 Robotic Jam LLC
+    <p style="margin-top: 5em;"></p>
 
+    <p id="copyright">&#169 2025 Robotic Jam LLC</p>
   </div>
 </div>
 
@@ -279,6 +305,20 @@ img.appstore {
         </div>
     </div>
   
+    <div id="signup-container" style="margin: 30px auto;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeximRjsQn63JXZaGIiMFEKv_Wsv240e8r0dFsoX41ZLFj_ew/viewform?usp=dialog" 
+           style="display: inline-block; padding: 10px 25px; background-color: #dda766; color: #1e140a; 
+                  font-weight: bold; text-decoration: none; border-radius: 5px; margin-bottom: 10px;"
+           target="_blank" rel="noopener noreferrer">
+            SIGN UP!
+        </a>
+        <p style="font-size: 0.9em; margin-top: 5px;">
+            to be notified of launch, betas, or game dev updates
+        </p>
+    </div>
+  
+    <p style="margin-top: 5em;"></p>
+
     <div id="icon-row">
         <div id="icon-container">
             <img src="HexFold-512.png">
@@ -349,7 +389,7 @@ img.appstore {
 
     <p id="description">BigSeconds -
 
-    When you need a timer that can give you voice updates as it approaches your target, so that you don't just get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
+    When you need a timer that can give you voice updates as it approaches your target, so that you don't get a beep too early or late for your time-sensitive goal, but can instead be aware and ready exactly on-time. Or maybe you want gentle haptic taps or tones as your target approaches, or visual cues only - it's under your control.
 
     Featuring a second-hand that doesn't amble along its tiny circular track, but instead SNAPS forward toward each new second energetically, reflecting your own ambition and sense of purpose. This second-hand stretches half-way across your screen, and has a RACING STRIPE!
 
@@ -472,7 +512,7 @@ img.appstore {
   <p></p>
     
   <p></p>
-
+    
   <p id="copyright">&#169 2025 Robotic Jam LLC </p>
 
   <p id="attribution">
@@ -503,7 +543,9 @@ img.appstore {
     <div id="right"> </div>
   </div>
 
-  &#169 2025 Robotic Jam LLC
+  <p style="margin-top: 5em;"></p>
+
+  <p id="copyright">&#169 2025 Robotic Jam LLC</p>
 
   </div>
 </div>
