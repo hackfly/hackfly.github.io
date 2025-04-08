@@ -57,6 +57,19 @@ h1, h2, h3, h4, h5, h6 {
     #screenshots img {
         max-width: 200px;
     }
+    /* Fix for lopsided content on desktop */
+    .tabcontent {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px; /* Adjust this value as needed */
+        width: calc(100% - 140px); /* Allow for tab width plus some margin */
+    }
+    
+    /* Keep your existing splash container centered */
+    #splash {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media screen and (max-width: 700px) {
     #chevron {
@@ -79,6 +92,26 @@ h1, h2, h3, h4, h5, h6 {
     }
     #splash .appstore {
         display: none;
+    }
+    .tabcontent {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .tab {
+        width: 120px; /* Fixed width matching desktop */
+        min-width: 120px;
+        float: none; /* Remove float which shifts layout */
+        margin: 0 0 15px 2px; /* Left-aligned margin (top, right, bottom, left) */
+    }
+    
+    .tab button {
+        display: block;
+        width: 100%;
+        padding: 5px; /* Match desktop padding */
+        margin-bottom: 2px;
+        text-align: left; /* Left-aligned text like desktop */
     }
     .tabcontent {
         height: auto;
@@ -206,14 +239,6 @@ img.appstore {
     overflow-y: auto;
 }
 
-.tabcontent > #content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-    min-height: 100%;
-}
-
 /* Center content vertically only on large screens */
 @media screen and (min-width: 1024px) and (min-height: 800px) {
     .tabcontent > #content {
@@ -227,6 +252,30 @@ img.appstore {
     padding-bottom: 20px;
     position: relative;
     flex-shrink: 0;
+}
+
+/* Add this to restore horizontal centering on mobile */
+@media screen and (max-width: 700px) {
+    .tabcontent {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .tab {
+        width: 120px; /* Fixed width matching desktop */
+        min-width: 120px;
+        float: none; /* Remove float which shifts layout */
+        margin: 0 0 15px 2px; /* Left-aligned margin (top, right, bottom, left) */
+    }
+    
+    .tab button {
+        display: block;
+        width: 100%;
+        padding: 5px; /* Match desktop padding */
+        margin-bottom: 2px;
+        text-align: left; /* Left-aligned text like desktop */
+    }
 }
 
 @media screen and (max-width: 700px) and (orientation: portrait) {
@@ -295,7 +344,7 @@ img.appstore {
             <br>
             <p>A mobile puzzler</p>
             <br>
-            <p>Coming soon!
+            <p><i>Coming soon!</i>
             </p>
         </div>
         <div id="right">
@@ -337,8 +386,7 @@ img.appstore {
     Chill vibe.
     
     Looks simple. But is it?
-    Judge a block by its color – at your peril.
-
+    
     Don't get stuck!
 
     </p>
