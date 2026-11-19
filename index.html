@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Robotic Jam &ndash; RunIntervals, BigSeconds, HexFold</title>
 <meta name="description" content="Robotic Jam: RunIntervals, a simple run/walk interval timer for iPhone and Apple Watch, plus BigSeconds and HexFold.">
@@ -298,7 +299,7 @@ footer a:hover { color: var(--text); }
   <footer>
     <nav aria-label="Legal">
       <a href="privacy.html">Privacy</a>
-      <a href="?tab=Contact" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
+      <a href="/Feedback" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
     </nav>
     <p id="copyright">&#169; 2026 Robotic Jam LLC</p>
   </footer>
@@ -480,7 +481,7 @@ footer a:hover { color: var(--text); }
   <footer>
     <nav aria-label="RunIntervals links">
       <a href="/RunIntervals/en/privacy/">Privacy</a>
-      <a href="?tab=Contact" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
+      <a href="/Feedback" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
     </nav>
     <p id="copyright">&#169; 2026 Robotic Jam LLC</p>
     <p class="note" style="margin-top:8px">Apple Watch, iPhone and Siri are trademarks of Apple Inc. Wrist photo by <a href="https://unsplash.com/photos/space-gray-aluminum-case-apple-watch-Odhl-kitI2c" rel="noopener">Tim Foster on Unsplash</a>, screen replaced with RunIntervals.</p>
@@ -531,7 +532,7 @@ footer a:hover { color: var(--text); }
   <footer>
     <nav aria-label="BigSeconds links">
       <a href="/BigSeconds/en/privacy/">Privacy</a>
-      <a href="?tab=Contact" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
+      <a href="/Feedback" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
     </nav>
     <p id="copyright">&#169; 2026 Robotic Jam LLC</p>
   </footer>
@@ -577,7 +578,7 @@ footer a:hover { color: var(--text); }
   <footer>
     <nav aria-label="HexFold links">
       <a href="/HexFold/en/privacy">Privacy</a>
-      <a href="?tab=Contact" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
+      <a href="/Feedback" onclick="openTab(null, 'Contact'); return false;">Feedback</a>
     </nav>
     <p id="copyright">&#169; 2026 Robotic Jam LLC</p>
   </footer>
@@ -632,7 +633,19 @@ footer a:hover { color: var(--text); }
             else if (calm) { clips[i].controls = true; }
             else { var p = clips[i].play(); if (p && p.catch) { p.catch(function() {}); } }
         }
-        if (evt !== undefined && evt !== false) { window.scrollTo(0, 0); }
+        if (evt !== undefined && evt !== false) {
+            window.scrollTo(0, 0);
+            showTabUrl(tabName);
+        }
+    }
+
+    // Keep the address bar shareable: /RunIntervals, /BigSeconds, /HexFold, /Feedback (each folder redirects back to
+    // ?tab=...), plain / for the home view. <base href="/"> keeps relative links working under those paths.
+    function showTabUrl(tabName) {
+        if (!(window.history && history.replaceState) || location.protocol === 'file:') return;
+        var short = { RunIntervals: 1, BigSeconds: 1, HexFold: 1 };
+        var url = tabName === 'Robotic Jam' ? '/' : tabName === 'Contact' ? '/Feedback' : short[tabName] ? '/' + tabName : '/?tab=' + encodeURIComponent(tabName);
+        history.replaceState(null, '', url);
     }
 
     // Function to get URL parameters
@@ -651,6 +664,7 @@ footer a:hover { color: var(--text); }
         var tab = getParameterByName('tab');
         if (tab && document.getElementById(tab) && document.getElementById(tab).className === 'tabcontent') {
             openTab(false, tab);
+            showTabUrl(tab);
         } else {
             openTab(false, 'Robotic Jam');
         }
